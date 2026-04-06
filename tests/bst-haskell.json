@@ -12,13 +12,13 @@
     "tasks": [
       {
         "strategy": "quickcheck",
-        "property": "InsertPost",
-        "counterexample": "((T E 2 1 E) 0 2 0)"
+        "counterexample": "((T E 2 1 E) 0 2 0)",
+        "property": "InsertPost"
       },
       {
+        "strategy": "quickcheck",
         "property": "InsertModel",
-        "counterexample": "((T E 1 0 E) 0 0)",
-        "strategy": "quickcheck"
+        "counterexample": "((T E 1 0 E) 0 0)"
       },
       {
         "counterexample": "((T E 1 0 E) 0 0 0)",
@@ -26,9 +26,9 @@
         "strategy": "quickcheck"
       },
       {
-        "property": "InsertInsert",
+        "counterexample": "(E 1 0 0 0)",
         "strategy": "quickcheck",
-        "counterexample": "(E 1 0 0 0)"
+        "property": "InsertInsert"
       },
       {
         "property": "InsertUnion",
@@ -36,8 +36,38 @@
         "strategy": "quickcheck"
       },
       {
-        "counterexample": "((T E 2 0 E) E 0 0)",
+        "property": "UnionDeleteInsert",
         "strategy": "quickcheck",
+        "counterexample": "((T E 2 0 E) E 0 0)"
+      },
+      {
+        "strategy": "hedgehog",
+        "counterexample": "((T E 2 1 E) 0 2 0)",
+        "property": "InsertPost"
+      },
+      {
+        "strategy": "hedgehog",
+        "counterexample": "((T E 1 0 E) 0 0)",
+        "property": "InsertModel"
+      },
+      {
+        "counterexample": "((T E 1 0 E) 0 0 0)",
+        "property": "DeleteInsert",
+        "strategy": "hedgehog"
+      },
+      {
+        "counterexample": "(E 1 0 0 0)",
+        "strategy": "hedgehog",
+        "property": "InsertInsert"
+      },
+      {
+        "counterexample": "(E (T E 1 1 E) 0 0)",
+        "property": "InsertUnion",
+        "strategy": "hedgehog"
+      },
+      {
+        "strategy": "hedgehog",
+        "counterexample": "((T E 2 0 E) E 0 0)",
         "property": "UnionDeleteInsert"
       }
     ]
@@ -54,14 +84,14 @@
     "params": null,
     "tasks": [
       {
-        "counterexample": "((T E 0 1 E) 1 0 0)",
         "property": "InsertPost",
+        "counterexample": "((T E 0 1 E) 1 0 0)",
         "strategy": "quickcheck"
       },
       {
+        "strategy": "quickcheck",
         "counterexample": "((T E -2 0 E) 0 0)",
-        "property": "InsertModel",
-        "strategy": "quickcheck"
+        "property": "InsertModel"
       },
       {
         "property": "InsertDelete",
@@ -69,9 +99,9 @@
         "strategy": "quickcheck"
       },
       {
-        "counterexample": "((T E 0 0 E) 0 1 0)",
         "property": "DeleteInsert",
-        "strategy": "quickcheck"
+        "strategy": "quickcheck",
+        "counterexample": "((T E 0 0 E) 0 1 0)"
       },
       {
         "counterexample": "(E 0 1 0 0)",
@@ -80,13 +110,48 @@
       },
       {
         "strategy": "quickcheck",
-        "counterexample": "(E (T E 0 0 E) 1 0)",
-        "property": "InsertUnion"
+        "property": "InsertUnion",
+        "counterexample": "(E (T E 0 0 E) 1 0)"
       },
       {
         "property": "UnionDeleteInsert",
         "counterexample": "((T E -2 0 E) E 0 0)",
         "strategy": "quickcheck"
+      },
+      {
+        "property": "InsertPost",
+        "counterexample": "((T E 0 1 E) 1 0 0)",
+        "strategy": "hedgehog"
+      },
+      {
+        "property": "InsertModel",
+        "strategy": "hedgehog",
+        "counterexample": "((T E -2 0 E) 0 0)"
+      },
+      {
+        "counterexample": "((T E 0 2 (T E 1 0 E)) 0 0 0)",
+        "strategy": "hedgehog",
+        "property": "InsertDelete"
+      },
+      {
+        "property": "DeleteInsert",
+        "counterexample": "((T E 0 0 E) 0 1 0)",
+        "strategy": "hedgehog"
+      },
+      {
+        "strategy": "hedgehog",
+        "property": "InsertInsert",
+        "counterexample": "(E 0 1 0 0)"
+      },
+      {
+        "strategy": "hedgehog",
+        "property": "InsertUnion",
+        "counterexample": "(E (T E 0 0 E) 1 0)"
+      },
+      {
+        "property": "UnionDeleteInsert",
+        "strategy": "hedgehog",
+        "counterexample": "((T E -2 0 E) E 0 0)"
       }
     ]
   },
@@ -102,32 +167,62 @@
     "params": null,
     "tasks": [
       {
-        "counterexample": "((T E 3 0 E) 3 3 1)",
+        "strategy": "quickcheck",
         "property": "InsertPost",
+        "counterexample": "((T E 3 0 E) 3 3 1)"
+      },
+      {
+        "counterexample": "((T E 0 1 E) 0 0)",
+        "property": "InsertModel",
         "strategy": "quickcheck"
       },
       {
-        "property": "InsertModel",
+        "counterexample": "((T (T E 0 0 E) 2 0 E) 2 2 0)",
         "strategy": "quickcheck",
-        "counterexample": "((T E 0 1 E) 0 0)"
+        "property": "InsertDelete"
       },
       {
-        "property": "InsertDelete",
+        "counterexample": "(E 0 0 1 0)",
         "strategy": "quickcheck",
-        "counterexample": "((T (T E 0 0 E) 2 0 E) 2 2 0)"
+        "property": "InsertInsert"
       },
       {
-        "property": "InsertInsert",
-        "strategy": "quickcheck",
-        "counterexample": "(E 0 0 1 0)"
-      },
-      {
-        "strategy": "quickcheck",
         "property": "InsertUnion",
+        "strategy": "quickcheck",
         "counterexample": "(E (T E 0 0 E) 1 0)"
       },
       {
         "strategy": "quickcheck",
+        "property": "UnionDeleteInsert",
+        "counterexample": "((T E -2 2 E) E -2 0)"
+      },
+      {
+        "strategy": "hedgehog",
+        "property": "InsertPost",
+        "counterexample": "((T E 3 0 E) 3 3 1)"
+      },
+      {
+        "counterexample": "((T E 0 1 E) 0 0)",
+        "property": "InsertModel",
+        "strategy": "hedgehog"
+      },
+      {
+        "property": "InsertDelete",
+        "strategy": "hedgehog",
+        "counterexample": "((T (T E 0 0 E) 2 0 E) 2 2 0)"
+      },
+      {
+        "strategy": "hedgehog",
+        "counterexample": "(E 0 0 1 0)",
+        "property": "InsertInsert"
+      },
+      {
+        "property": "InsertUnion",
+        "counterexample": "(E (T E 0 0 E) 1 0)",
+        "strategy": "hedgehog"
+      },
+      {
+        "strategy": "hedgehog",
         "property": "UnionDeleteInsert",
         "counterexample": "((T E -2 2 E) E -2 0)"
       }
@@ -145,14 +240,14 @@
     "params": null,
     "tasks": [
       {
+        "strategy": "quickcheck",
         "counterexample": "((T E 0 0 E) 1)",
-        "property": "DeleteModel",
-        "strategy": "quickcheck"
+        "property": "DeleteModel"
       },
       {
-        "strategy": "quickcheck",
         "counterexample": "((T E 0 0 E) 1 0)",
-        "property": "DeletePost"
+        "property": "DeletePost",
+        "strategy": "quickcheck"
       },
       {
         "counterexample": "((T (T (T E 0 0 E) 3 5 E) 5 0 E) 5 3)",
@@ -165,19 +260,54 @@
         "strategy": "quickcheck"
       },
       {
+        "counterexample": "((T E -1 0 E) (T E 0 1 E) -1)",
         "property": "DeleteUnion",
+        "strategy": "quickcheck"
+      },
+      {
         "strategy": "quickcheck",
-        "counterexample": "((T E -1 0 E) (T E 0 1 E) -1)"
-      },
-      {
         "property": "InsertDelete",
-        "counterexample": "(E 0 1 0)",
-        "strategy": "quickcheck"
+        "counterexample": "(E 0 1 0)"
       },
       {
-        "property": "UnionDeleteInsert",
+        "strategy": "quickcheck",
         "counterexample": "((T E 0 1 E) (T E 1 0 E) 0 0)",
-        "strategy": "quickcheck"
+        "property": "UnionDeleteInsert"
+      },
+      {
+        "counterexample": "((T E 0 0 E) 1)",
+        "strategy": "hedgehog",
+        "property": "DeleteModel"
+      },
+      {
+        "property": "DeletePost",
+        "strategy": "hedgehog",
+        "counterexample": "((T E 0 0 E) 1 0)"
+      },
+      {
+        "counterexample": "((T (T (T E 0 0 E) 3 5 E) 5 0 E) 5 3)",
+        "property": "DeleteDelete",
+        "strategy": "hedgehog"
+      },
+      {
+        "property": "DeleteInsert",
+        "strategy": "hedgehog",
+        "counterexample": "(E 0 1 0)"
+      },
+      {
+        "counterexample": "((T E -1 0 E) (T E 0 1 E) -1)",
+        "property": "DeleteUnion",
+        "strategy": "hedgehog"
+      },
+      {
+        "strategy": "hedgehog",
+        "property": "InsertDelete",
+        "counterexample": "(E 0 1 0)"
+      },
+      {
+        "strategy": "hedgehog",
+        "counterexample": "((T E 0 1 E) (T E 1 0 E) 0 0)",
+        "property": "UnionDeleteInsert"
       }
     ]
   },
@@ -198,28 +328,58 @@
         "property": "DeleteModel"
       },
       {
-        "counterexample": "((T (T E 2 0 E) 4 1 E) 2 2)",
         "property": "DeletePost",
+        "counterexample": "((T (T E 2 0 E) 4 1 E) 2 2)",
         "strategy": "quickcheck"
       },
       {
-        "property": "DeleteDelete",
         "counterexample": "((T E -4 0 (T E 4 4 E)) 4 -4)",
+        "strategy": "quickcheck",
+        "property": "DeleteDelete"
+      },
+      {
+        "property": "DeleteInsert",
+        "counterexample": "((T E 2 0 E) -2 -2 0)",
         "strategy": "quickcheck"
       },
       {
+        "property": "DeleteUnion",
         "strategy": "quickcheck",
-        "property": "DeleteInsert",
-        "counterexample": "((T E 2 0 E) -2 -2 0)"
-      },
-      {
-        "counterexample": "((T E -1 0 (T E 0 0 E)) (T E -2 2 E) -1)",
-        "strategy": "quickcheck",
-        "property": "DeleteUnion"
+        "counterexample": "((T E -1 0 (T E 0 0 E)) (T E -2 2 E) -1)"
       },
       {
         "property": "UnionDeleteInsert",
         "strategy": "quickcheck",
+        "counterexample": "((T (T E -1 0 E) 0 0 E) E 0 0)"
+      },
+      {
+        "property": "DeleteModel",
+        "strategy": "hedgehog",
+        "counterexample": "((T (T E 1 0 E) 3 0 E) 1)"
+      },
+      {
+        "counterexample": "((T (T E 2 0 E) 4 1 E) 2 2)",
+        "property": "DeletePost",
+        "strategy": "hedgehog"
+      },
+      {
+        "strategy": "hedgehog",
+        "counterexample": "((T E -4 0 (T E 4 4 E)) 4 -4)",
+        "property": "DeleteDelete"
+      },
+      {
+        "property": "DeleteInsert",
+        "counterexample": "((T E 2 0 E) -2 -2 0)",
+        "strategy": "hedgehog"
+      },
+      {
+        "counterexample": "((T E -1 0 (T E 0 0 E)) (T E -2 2 E) -1)",
+        "strategy": "hedgehog",
+        "property": "DeleteUnion"
+      },
+      {
+        "property": "UnionDeleteInsert",
+        "strategy": "hedgehog",
         "counterexample": "((T (T E -1 0 E) 0 0 E) E 0 0)"
       }
     ]
@@ -236,14 +396,14 @@
     "params": null,
     "tasks": [
       {
-        "strategy": "quickcheck",
         "property": "UnionValid",
+        "strategy": "quickcheck",
         "counterexample": "((T E 0 0 E) (T E 0 0 E))"
       },
       {
-        "counterexample": "((T E 0 0 (T E 1 1 E)) (T E 0 0 E) 1)",
         "strategy": "quickcheck",
-        "property": "UnionPost"
+        "property": "UnionPost",
+        "counterexample": "((T E 0 0 (T E 1 1 E)) (T E 0 0 E) 1)"
       },
       {
         "strategy": "quickcheck",
@@ -251,14 +411,14 @@
         "counterexample": "((T E 0 0 E) (T E 0 0 E))"
       },
       {
-        "counterexample": "((T E 2 2 E) (T E -1 0 E) -1)",
+        "strategy": "quickcheck",
         "property": "DeleteUnion",
-        "strategy": "quickcheck"
+        "counterexample": "((T E 2 2 E) (T E -1 0 E) -1)"
       },
       {
+        "property": "InsertUnion",
         "counterexample": "(E (T E 0 0 E) 1 0)",
-        "strategy": "quickcheck",
-        "property": "InsertUnion"
+        "strategy": "quickcheck"
       },
       {
         "property": "UnionDeleteInsert",
@@ -267,8 +427,43 @@
       },
       {
         "counterexample": "((T E 0 1 E) (T E 0 1 E) (T E 0 0 E))",
+        "strategy": "quickcheck",
+        "property": "UnionUnionAssoc"
+      },
+      {
+        "property": "UnionValid",
+        "strategy": "hedgehog",
+        "counterexample": "((T E 0 0 E) (T E 0 0 E))"
+      },
+      {
+        "property": "UnionPost",
+        "counterexample": "((T E 0 0 (T E 1 1 E)) (T E 0 0 E) 1)",
+        "strategy": "hedgehog"
+      },
+      {
+        "strategy": "hedgehog",
+        "counterexample": "((T E 0 0 E) (T E 0 0 E))",
+        "property": "UnionModel"
+      },
+      {
+        "strategy": "hedgehog",
+        "property": "DeleteUnion",
+        "counterexample": "((T E 2 2 E) (T E -1 0 E) -1)"
+      },
+      {
+        "strategy": "hedgehog",
+        "property": "InsertUnion",
+        "counterexample": "(E (T E 0 0 E) 1 0)"
+      },
+      {
+        "strategy": "hedgehog",
+        "property": "UnionDeleteInsert",
+        "counterexample": "((T E 0 0 E) (T E 0 0 E) 0 0)"
+      },
+      {
         "property": "UnionUnionAssoc",
-        "strategy": "quickcheck"
+        "counterexample": "((T E 0 1 E) (T E 0 1 E) (T E 0 0 E))",
+        "strategy": "hedgehog"
       }
     ]
   },
@@ -284,39 +479,74 @@
     "params": null,
     "tasks": [
       {
-        "counterexample": "(E (T E 0 2 (T E 0 0 E)))",
         "property": "UnionValid",
+        "counterexample": "(E (T E 0 2 (T E 0 0 E)))",
         "strategy": "quickcheck"
       },
       {
-        "counterexample": "((T (T E -2 0 E) 2 0 E) (T E 0 0 E) -2)",
         "strategy": "quickcheck",
-        "property": "UnionPost"
+        "property": "UnionPost",
+        "counterexample": "((T (T E -2 0 E) 2 0 E) (T E 0 0 E) -2)"
       },
       {
+        "strategy": "quickcheck",
         "counterexample": "((T E -1 0 E) (T (T E -2 1 E) 0 0 E))",
-        "property": "UnionModel",
+        "property": "UnionModel"
+      },
+      {
+        "counterexample": "((T E 0 0 E) (T (T E 0 0 E) 2 0 E) 2)",
+        "property": "DeleteUnion",
         "strategy": "quickcheck"
       },
       {
-        "property": "DeleteUnion",
+        "property": "InsertUnion",
+        "counterexample": "((T E 0 0 E) (T E 1 1 E) 1 0)",
+        "strategy": "quickcheck"
+      },
+      {
+        "counterexample": "((T (T E -1 0 E) 0 0 E) E 0 0)",
         "strategy": "quickcheck",
+        "property": "UnionDeleteInsert"
+      },
+      {
+        "strategy": "quickcheck",
+        "property": "UnionUnionAssoc",
+        "counterexample": "((T E 0 0 E) (T E 1 0 E) (T E 1 1 E))"
+      },
+      {
+        "property": "UnionValid",
+        "counterexample": "(E (T E 0 2 (T E 0 0 E)))",
+        "strategy": "hedgehog"
+      },
+      {
+        "property": "UnionPost",
+        "strategy": "hedgehog",
+        "counterexample": "((T (T E -2 0 E) 2 0 E) (T E 0 0 E) -2)"
+      },
+      {
+        "strategy": "hedgehog",
+        "property": "UnionModel",
+        "counterexample": "((T E -1 0 E) (T (T E -2 1 E) 0 0 E))"
+      },
+      {
+        "strategy": "hedgehog",
+        "property": "DeleteUnion",
         "counterexample": "((T E 0 0 E) (T (T E 0 0 E) 2 0 E) 2)"
       },
       {
         "counterexample": "((T E 0 0 E) (T E 1 1 E) 1 0)",
         "property": "InsertUnion",
-        "strategy": "quickcheck"
+        "strategy": "hedgehog"
       },
       {
-        "strategy": "quickcheck",
-        "property": "UnionDeleteInsert",
-        "counterexample": "((T (T E -1 0 E) 0 0 E) E 0 0)"
+        "counterexample": "((T (T E -1 0 E) 0 0 E) E 0 0)",
+        "strategy": "hedgehog",
+        "property": "UnionDeleteInsert"
       },
       {
-        "strategy": "quickcheck",
-        "counterexample": "((T E 0 0 E) (T E 1 0 E) (T E 1 1 E))",
-        "property": "UnionUnionAssoc"
+        "strategy": "hedgehog",
+        "property": "UnionUnionAssoc",
+        "counterexample": "((T E 0 0 E) (T E 1 0 E) (T E 1 1 E))"
       }
     ]
   },
@@ -333,32 +563,62 @@
     "tasks": [
       {
         "property": "UnionPost",
-        "strategy": "quickcheck",
-        "counterexample": "((T (T E 4 4 E) 2147483647 0 E) (T E 4 0 E) 4)"
+        "counterexample": "((T (T E 4 4 E) 2147483647 0 E) (T E 4 0 E) 4)",
+        "strategy": "quickcheck"
       },
       {
-        "counterexample": "((T (T E -2 0 E) 2 0 E) (T E -2 1 E))",
         "property": "UnionModel",
+        "counterexample": "((T (T E -2 0 E) 2 0 E) (T E -2 1 E))",
         "strategy": "quickcheck"
       },
       {
+        "strategy": "quickcheck",
         "counterexample": "((T (T E -2 0 E) 1 0 E) (T E 0 0 E) 1)",
-        "property": "DeleteUnion",
-        "strategy": "quickcheck"
+        "property": "DeleteUnion"
       },
       {
-        "property": "InsertUnion",
         "counterexample": "((T E 2 2 E) (T E -1 1 E) -1 0)",
+        "strategy": "quickcheck",
+        "property": "InsertUnion"
+      },
+      {
+        "counterexample": "((T E -1 3 E) (T E 3 1 E) -1 0)",
+        "property": "UnionDeleteInsert",
         "strategy": "quickcheck"
       },
       {
-        "property": "UnionDeleteInsert",
-        "counterexample": "((T E -1 3 E) (T E 3 1 E) -1 0)",
+        "property": "UnionUnionAssoc",
+        "counterexample": "((T E 2 1 E) (T E 2 0 E) (T E 0 0 E))",
         "strategy": "quickcheck"
+      },
+      {
+        "property": "UnionPost",
+        "counterexample": "((T (T E 4 4 E) 2147483647 0 E) (T E 4 0 E) 4)",
+        "strategy": "hedgehog"
+      },
+      {
+        "property": "UnionModel",
+        "counterexample": "((T (T E -2 0 E) 2 0 E) (T E -2 1 E))",
+        "strategy": "hedgehog"
+      },
+      {
+        "strategy": "hedgehog",
+        "counterexample": "((T (T E -2 0 E) 1 0 E) (T E 0 0 E) 1)",
+        "property": "DeleteUnion"
+      },
+      {
+        "strategy": "hedgehog",
+        "counterexample": "((T E 2 2 E) (T E -1 1 E) -1 0)",
+        "property": "InsertUnion"
+      },
+      {
+        "counterexample": "((T E -1 3 E) (T E 3 1 E) -1 0)",
+        "strategy": "hedgehog",
+        "property": "UnionDeleteInsert"
       },
       {
         "counterexample": "((T E 2 1 E) (T E 2 0 E) (T E 0 0 E))",
-        "strategy": "quickcheck",
+        "strategy": "hedgehog",
         "property": "UnionUnionAssoc"
       }
     ]
