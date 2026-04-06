@@ -15,6 +15,7 @@ dependencies:
     - regex-tdfa
     - deepseq
     - time
+    - hedgehog
 
 library:
     source-dirs: src

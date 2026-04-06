@@ -8,6 +8,7 @@ dependencies:
     - leancheck
     - generic-random
     - deepseq
+    - hedgehog
 
 library:
     source-dirs: src

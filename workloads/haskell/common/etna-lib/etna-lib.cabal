@@ -11,6 +11,7 @@ build-type:     Simple
 library
   exposed-modules:
       Etna.Lib
+      Etna.Lib.Strategy.Hedgehog
       Etna.Lib.Strategy.LeanCheck
       Etna.Lib.Strategy.QuickCheck
       Etna.Lib.Strategy.SmallCheck
@@ -29,6 +30,7 @@ library
     , bytestring
     , clock
     , deepseq
+    , hedgehog
     , leancheck
     , regex-tdfa
     , silently
