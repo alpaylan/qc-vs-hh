@@ -93,7 +93,7 @@ eval ia = do
 run :: Info -> Timeout -> IO Result -> IO ()
 run info timeout test = do
   result <- runOne info timeout test
-  putStrLn ("[|" ++ BL.unpack (encode result) ++ "|]")
+  putStrLn (BL.unpack (encode result))
   -- B8.appendFile file (encode result)
   -- Prelude.appendFile file "\n"
 
