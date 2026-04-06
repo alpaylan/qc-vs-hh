@@ -4,6 +4,7 @@
 module Etna.Lib.TH (mkStrategies, mkMain) where
 
 import Etna.Lib.Types (ExpArgs (..), Result)
+import Data.Char (toLower)
 import Language.Haskell.TH
 
 mkStrategies :: Q Exp -> [Name] -> Q [Dec]
@@ -25,6 +26,7 @@ mkMain ims ips = do
   ms <- runIO ims
   ps <- runIO ips
   let mps = concatMap (\m -> map (m,) ps) ms
+      amps = concatMap (\(m, p) -> map (\a -> (m, a, p)) (strategyAliases m)) mps
   [d|
     main :: IO ()
     main = do
@@ -35,13 +37,13 @@ mkMain ims ips = do
       run (workload, strategy, prop) timeout test
 
     mmap :: [((String, String), IO Result)]
-    mmap = $(listE (map mkPair mps))
+    mmap = $(listE (map mkAliasPair amps))
     |]
   where
-    mkPair :: (String, String) -> Q Exp
-    mkPair (m, p) = do
+    mkAliasPair :: (String, String, String) -> Q Exp
+    mkAliasPair (m, a, p) = do
       t <- lookupName m (propToTest p)
-      [|((m, p), $(varE t))|]
+      [|((a, p), $(varE t))|]
 
     lookupName pre suf = do
       let name = pre ++ "." ++ suf
@@ -57,6 +59,7 @@ mkMainSampler ims ips = do
   ms <- runIO ims
   ps <- runIO ips
   let mps = concatMap (\m -> map (m,) ps) ms
+      amps = concatMap (\(m, p) -> map (\a -> (m, a, p)) (strategyAliases m)) mps
   [d|
     main :: IO ()
     main = do
@@ -67,13 +70,13 @@ mkMainSampler ims ips = do
       sample (workload, strategy, prop) timeout test
 
     mmap :: [((String, String), IO Result)]
-    mmap = $(listE (map mkPair mps))
+    mmap = $(listE (map mkAliasPair amps))
     |]
   where
-    mkPair :: (String, String) -> Q Exp
-    mkPair (m, p) = do
+    mkAliasPair :: (String, String, String) -> Q Exp
+    mkAliasPair (m, a, p) = do
       t <- lookupName m (propToTest p)
-      [|((m, p), $(varE t))|]
+      [|((a, p), $(varE t))|]
 
     lookupName pre suf = do
       let name = pre ++ "." ++ suf
@@ -86,3 +89,14 @@ mkMainSampler ims ips = do
 
 propToTest :: String -> String
 propToTest = ("test_" ++) . tail . dropWhile (/= '_')
+
+strategyAliases :: String -> [String]
+strategyAliases m =
+  let lower = map toLower m
+      extra = case lower of
+        "quick" -> ["quickcheck"]
+        "small" -> ["smallcheck"]
+        "lean" -> ["leancheck"]
+        "hedgehog" -> ["hh"]
+        _ -> []
+   in m : lower : extra

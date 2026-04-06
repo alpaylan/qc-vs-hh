@@ -13,6 +13,7 @@ library
       Impl
       Spec
       Strategy.Correct
+      Strategy.Hedgehog
       Strategy.Lean
       Strategy.LeanRev
       Strategy.Quick
