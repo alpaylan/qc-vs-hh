@@ -7,9 +7,11 @@ module Etna.Lib
     module Etna.Lib.Strategy.Hedgehog,
     module Etna.Lib.Strategy.SmallCheck,
     module Etna.Lib.Strategy.QuickCheck,
+    module Etna.Lib.Strategy.Falsify,
   )
 where
 
+import Etna.Lib.Strategy.Falsify
 import Etna.Lib.Strategy.Hedgehog
 import Etna.Lib.Strategy.LeanCheck
 import Etna.Lib.Strategy.QuickCheck
