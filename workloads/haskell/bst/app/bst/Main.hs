@@ -6,6 +6,7 @@ import Etna.Lib
 import Data.List (lookup)
 import Data.Maybe
 import Strategy.Correct as Correct
+import Strategy.Falsify as Falsify
 import Strategy.Hedgehog as Hedgehog
 import Strategy.Lean as Lean
 import Strategy.LeanRev as LeanRev
@@ -18,6 +19,7 @@ import System.Environment (getArgs)
 $( mkMain
      ( return
          [ "Correct",
+           "Falsify",
            "Hedgehog",
            "Lean",
            "LeanRev",
