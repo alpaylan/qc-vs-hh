@@ -9,6 +9,7 @@ dependencies:
     - generic-random
     - deepseq
     - hedgehog
+    - falsify
 
 library:
     source-dirs: src

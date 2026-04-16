@@ -23,22 +23,23 @@ hhRunGen cap app gen task = do
   let prop =
         HH.withTests (fromIntegral cap) $
           HH.withShrinks 0 $
-            HH.property $ do
-              a <- HH.forAll gen
-              HH.evalIO $ writeIORef counterexampleRef (show a)
-              let (pre, post) = task a
-              case app of
-                Naive ->
-                  if pre
-                    then do
-                      HH.evalIO $ modifyIORef' testsRef (+ 1)
-                      HH.assert post
-                    else do
-                      HH.evalIO $ modifyIORef' discardsRef (+ 1)
-                      HH.discard
-                Correct -> do
-                  HH.evalIO $ modifyIORef' testsRef (+ 1)
-                  HH.assert post
+            HH.withDiscards (fromIntegral cap) $
+              HH.property $ do
+                a <- HH.forAll gen
+                HH.evalIO $ writeIORef counterexampleRef (show a)
+                let (pre, post) = task a
+                case app of
+                  Naive ->
+                    if pre
+                      then do
+                        HH.evalIO $ modifyIORef' testsRef (+ 1)
+                        HH.assert post
+                      else do
+                        HH.evalIO $ modifyIORef' discardsRef (+ 1)
+                        HH.discard
+                  Correct -> do
+                    HH.evalIO $ modifyIORef' testsRef (+ 1)
+                    HH.assert post
 
   ok <- HH.check prop
   tests <- readIORef testsRef

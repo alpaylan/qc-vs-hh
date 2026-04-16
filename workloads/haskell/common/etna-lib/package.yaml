@@ -17,6 +17,7 @@ dependencies:
     - time
     - hedgehog
     - falsify
+    - tasty
 
 library:
     source-dirs: src
