@@ -16,6 +16,7 @@ dependencies:
     - deepseq
     - time
     - hedgehog
+    - falsify
 
 library:
     source-dirs: src
