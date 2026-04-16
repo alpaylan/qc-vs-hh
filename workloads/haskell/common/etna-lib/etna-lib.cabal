@@ -38,6 +38,7 @@ library
     , silently
     , smallcheck
     , template-haskell
+    , tasty
     , time
     , timeit
   default-language: Haskell2010
