@@ -27,18 +27,18 @@ insert k v (T l k' v' r)
   | otherwise = T l k' v r
   -}
   {-!! insert_1 -}
-  {-!
   = T E k v E
-  -}
   {-!! insert_2 -}
   {-!
   | k < k' = T (insert k v l) k' v' r
   | otherwise = T l k' v r
   -}
   {-!! insert_3 -}
+  {-!
   | k < k' = T (insert k v l) k' v' r
   | k > k' = T l k' v' (insert k v r)
   | otherwise = T l k' v' r
+  -}
   {- !-}
 
 ----------
