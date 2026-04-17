@@ -76,20 +76,20 @@ union :: Ord k => Tree k v -> Tree k v -> Tree k v
 union E r = r
 union l E = l
 {-! -}
-{-!
 union (T l k v r) t =
   T (union l (below k t)) k v (union r (above k t))
--}
 {-!! union_6 -}
 {-!
 union (T l k v r) (T l' k' v' r') =
   T l k v (T (union r l') k' v' r')
 -}
 {-!! union_7 -}
+{-!
 union (T l k v r) (T l' k' v' r')
   | k == k'   = T (union l l') k v (union r r')
   | k < k'    = T l k v (T (union r l') k' v' r')
   | otherwise = union (T l' k' v' r') (T l k v r)
+-}
 {-!! union_8 -}
 {-!
 union (T l k v r) (T l' k' v' r')
