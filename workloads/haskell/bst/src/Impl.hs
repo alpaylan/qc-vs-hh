@@ -47,9 +47,11 @@ delete :: Ord k => k -> Tree k v -> Tree k v
 delete _ E = E
 delete k (T l k' v' r)
   {-! -}
+  {-!
   | k < k' = T (delete k l) k' v' r
   | k > k' = T l k' v' (delete k r)
   | otherwise = join l r
+  -}
   {-!! delete_4 -}
   {-!
   | k < k' = delete k l
@@ -57,11 +59,9 @@ delete k (T l k' v' r)
   | otherwise = join l r
   -}
   {-!! delete_5 -}
-  {-!
   | k > k' = T (delete k l) k' v' r
   | k < k' = T l k' v' (delete k r)
   | otherwise = join l r
-  -}
   {- !-}
 
 join :: Tree k v -> Tree k v -> Tree k v
