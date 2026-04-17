@@ -11,75 +11,75 @@
     "params": null,
     "tasks": [
       {
-        "property": "InsertPost",
+        "property": "prop_InsertPost",
         "strategy": "quickcheck"
       },
       {
         "strategy": "quickcheck",
-        "property": "InsertModel"
+        "property": "prop_InsertModel"
       },
       {
         "strategy": "quickcheck",
-        "property": "DeleteInsert"
+        "property": "prop_DeleteInsert"
       },
       {
         "strategy": "quickcheck",
-        "property": "InsertInsert"
+        "property": "prop_InsertInsert"
       },
       {
-        "property": "InsertUnion",
+        "property": "prop_InsertUnion",
         "strategy": "quickcheck"
       },
       {
-        "property": "UnionDeleteInsert",
+        "property": "prop_UnionDeleteInsert",
         "strategy": "quickcheck"
       },
       {
-        "property": "InsertPost",
+        "property": "prop_InsertPost",
         "strategy": "hedgehog"
       },
       {
-        "property": "InsertModel",
+        "property": "prop_InsertModel",
         "strategy": "hedgehog"
       },
       {
         "strategy": "hedgehog",
-        "property": "DeleteInsert"
+        "property": "prop_DeleteInsert"
       },
       {
         "strategy": "hedgehog",
-        "property": "InsertInsert"
+        "property": "prop_InsertInsert"
       },
       {
         "strategy": "hedgehog",
-        "property": "InsertUnion"
+        "property": "prop_InsertUnion"
       },
       {
         "strategy": "hedgehog",
-        "property": "UnionDeleteInsert"
+        "property": "prop_UnionDeleteInsert"
       },
       {
-        "property": "InsertPost",
+        "property": "prop_InsertPost",
         "strategy": "falsify"
       },
       {
         "strategy": "falsify",
-        "property": "InsertModel"
+        "property": "prop_InsertModel"
       },
       {
         "strategy": "falsify",
-        "property": "DeleteInsert"
+        "property": "prop_DeleteInsert"
       },
       {
         "strategy": "falsify",
-        "property": "InsertInsert"
+        "property": "prop_InsertInsert"
       },
       {
-        "property": "InsertUnion",
+        "property": "prop_InsertUnion",
         "strategy": "falsify"
       },
       {
-        "property": "UnionDeleteInsert",
+        "property": "prop_UnionDeleteInsert",
         "strategy": "falsify"
       }
     ]
@@ -97,86 +97,86 @@
     "tasks": [
       {
         "strategy": "quickcheck",
-        "property": "InsertPost"
+        "property": "prop_InsertPost"
       },
       {
-        "property": "InsertModel",
+        "property": "prop_InsertModel",
         "strategy": "quickcheck"
       },
       {
-        "property": "InsertDelete",
+        "property": "prop_InsertDelete",
         "strategy": "quickcheck"
       },
       {
         "strategy": "quickcheck",
-        "property": "DeleteInsert"
+        "property": "prop_DeleteInsert"
       },
       {
         "strategy": "quickcheck",
-        "property": "InsertInsert"
+        "property": "prop_InsertInsert"
       },
       {
         "strategy": "quickcheck",
-        "property": "InsertUnion"
+        "property": "prop_InsertUnion"
       },
       {
-        "property": "UnionDeleteInsert",
+        "property": "prop_UnionDeleteInsert",
         "strategy": "quickcheck"
       },
       {
         "strategy": "hedgehog",
-        "property": "InsertPost"
+        "property": "prop_InsertPost"
       },
       {
         "strategy": "hedgehog",
-        "property": "InsertModel"
+        "property": "prop_InsertModel"
       },
       {
-        "property": "InsertDelete",
+        "property": "prop_InsertDelete",
         "strategy": "hedgehog"
       },
       {
-        "property": "DeleteInsert",
+        "property": "prop_DeleteInsert",
         "strategy": "hedgehog"
       },
       {
-        "property": "InsertInsert",
+        "property": "prop_InsertInsert",
         "strategy": "hedgehog"
       },
       {
         "strategy": "hedgehog",
-        "property": "InsertUnion"
+        "property": "prop_InsertUnion"
       },
       {
         "strategy": "hedgehog",
-        "property": "UnionDeleteInsert"
+        "property": "prop_UnionDeleteInsert"
       },
       {
         "strategy": "falsify",
-        "property": "InsertPost"
+        "property": "prop_InsertPost"
       },
       {
-        "property": "InsertModel",
+        "property": "prop_InsertModel",
         "strategy": "falsify"
       },
       {
-        "property": "InsertDelete",
+        "property": "prop_InsertDelete",
         "strategy": "falsify"
       },
       {
         "strategy": "falsify",
-        "property": "DeleteInsert"
+        "property": "prop_DeleteInsert"
       },
       {
         "strategy": "falsify",
-        "property": "InsertInsert"
+        "property": "prop_InsertInsert"
       },
       {
         "strategy": "falsify",
-        "property": "InsertUnion"
+        "property": "prop_InsertUnion"
       },
       {
-        "property": "UnionDeleteInsert",
+        "property": "prop_UnionDeleteInsert",
         "strategy": "falsify"
       }
     ]
@@ -194,74 +194,74 @@
     "tasks": [
       {
         "strategy": "quickcheck",
-        "property": "InsertPost"
+        "property": "prop_InsertPost"
       },
       {
         "strategy": "quickcheck",
-        "property": "InsertModel"
+        "property": "prop_InsertModel"
       },
       {
         "strategy": "quickcheck",
-        "property": "InsertDelete"
+        "property": "prop_InsertDelete"
       },
       {
         "strategy": "quickcheck",
-        "property": "InsertInsert"
+        "property": "prop_InsertInsert"
       },
       {
         "strategy": "quickcheck",
-        "property": "InsertUnion"
+        "property": "prop_InsertUnion"
       },
       {
-        "property": "UnionDeleteInsert",
+        "property": "prop_UnionDeleteInsert",
         "strategy": "quickcheck"
       },
       {
         "strategy": "hedgehog",
-        "property": "InsertPost"
+        "property": "prop_InsertPost"
       },
       {
         "strategy": "hedgehog",
-        "property": "InsertModel"
+        "property": "prop_InsertModel"
       },
       {
         "strategy": "hedgehog",
-        "property": "InsertDelete"
+        "property": "prop_InsertDelete"
       },
       {
         "strategy": "hedgehog",
-        "property": "InsertInsert"
+        "property": "prop_InsertInsert"
       },
       {
         "strategy": "hedgehog",
-        "property": "InsertUnion"
+        "property": "prop_InsertUnion"
       },
       {
         "strategy": "hedgehog",
-        "property": "UnionDeleteInsert"
+        "property": "prop_UnionDeleteInsert"
       },
       {
         "strategy": "falsify",
-        "property": "InsertPost"
+        "property": "prop_InsertPost"
       },
       {
         "strategy": "falsify",
-        "property": "InsertModel"
+        "property": "prop_InsertModel"
       },
       {
         "strategy": "falsify",
-        "property": "InsertDelete"
+        "property": "prop_InsertDelete"
       },
       {
         "strategy": "falsify",
-        "property": "InsertInsert"
+        "property": "prop_InsertInsert"
       },
       {
         "strategy": "falsify",
-        "property": "InsertUnion"
+        "property": "prop_InsertUnion"
       },
       {
-        "property": "UnionDeleteInsert",
+        "property": "prop_UnionDeleteInsert",
         "strategy": "falsify"
       }
     ]
@@ -278,88 +278,88 @@
     "params": null,
     "tasks": [
       {
-        "property": "DeleteModel",
+        "property": "prop_DeleteModel",
         "strategy": "quickcheck"
       },
       {
-        "property": "DeletePost",
+        "property": "prop_DeletePost",
         "strategy": "quickcheck"
       },
       {
-        "property": "DeleteDelete",
-        "strategy": "quickcheck"
-      },
-      {
-        "strategy": "quickcheck",
-        "property": "DeleteInsert"
-      },
-      {
-        "property": "DeleteUnion",
+        "property": "prop_DeleteDelete",
         "strategy": "quickcheck"
       },
       {
         "strategy": "quickcheck",
-        "property": "InsertDelete"
+        "property": "prop_DeleteInsert"
+      },
+      {
+        "property": "prop_DeleteUnion",
+        "strategy": "quickcheck"
       },
       {
         "strategy": "quickcheck",
-        "property": "UnionDeleteInsert"
+        "property": "prop_InsertDelete"
       },
       {
-        "property": "DeleteModel",
+        "strategy": "quickcheck",
+        "property": "prop_UnionDeleteInsert"
+      },
+      {
+        "property": "prop_DeleteModel",
         "strategy": "hedgehog"
       },
       {
         "strategy": "hedgehog",
-        "property": "DeletePost"
+        "property": "prop_DeletePost"
       },
       {
-        "property": "DeleteDelete",
+        "property": "prop_DeleteDelete",
         "strategy": "hedgehog"
       },
       {
-        "property": "DeleteInsert",
+        "property": "prop_DeleteInsert",
         "strategy": "hedgehog"
       },
       {
         "strategy": "hedgehog",
-        "property": "DeleteUnion"
+        "property": "prop_DeleteUnion"
       },
       {
         "strategy": "hedgehog",
-        "property": "InsertDelete"
+        "property": "prop_InsertDelete"
       },
       {
-        "property": "UnionDeleteInsert",
+        "property": "prop_UnionDeleteInsert",
         "strategy": "hedgehog"
       },
       {
-        "property": "DeleteModel",
+        "property": "prop_DeleteModel",
         "strategy": "falsify"
       },
       {
-        "property": "DeletePost",
+        "property": "prop_DeletePost",
         "strategy": "falsify"
       },
       {
-        "property": "DeleteDelete",
-        "strategy": "falsify"
-      },
-      {
-        "strategy": "falsify",
-        "property": "DeleteInsert"
-      },
-      {
-        "property": "DeleteUnion",
+        "property": "prop_DeleteDelete",
         "strategy": "falsify"
       },
       {
         "strategy": "falsify",
-        "property": "InsertDelete"
+        "property": "prop_DeleteInsert"
+      },
+      {
+        "property": "prop_DeleteUnion",
+        "strategy": "falsify"
       },
       {
         "strategy": "falsify",
-        "property": "UnionDeleteInsert"
+        "property": "prop_InsertDelete"
+      },
+      {
+        "strategy": "falsify",
+        "property": "prop_UnionDeleteInsert"
       }
     ]
   },
@@ -375,75 +375,75 @@
     "params": null,
     "tasks": [
       {
-        "property": "DeleteModel",
+        "property": "prop_DeleteModel",
         "strategy": "quickcheck"
       },
       {
-        "property": "DeletePost",
+        "property": "prop_DeletePost",
         "strategy": "quickcheck"
       },
       {
-        "property": "DeleteDelete",
+        "property": "prop_DeleteDelete",
         "strategy": "quickcheck"
       },
       {
         "strategy": "quickcheck",
-        "property": "DeleteInsert"
+        "property": "prop_DeleteInsert"
       },
       {
         "strategy": "quickcheck",
-        "property": "DeleteUnion"
+        "property": "prop_DeleteUnion"
       },
       {
-        "property": "UnionDeleteInsert",
+        "property": "prop_UnionDeleteInsert",
         "strategy": "quickcheck"
       },
       {
-        "property": "DeleteModel",
+        "property": "prop_DeleteModel",
         "strategy": "hedgehog"
       },
       {
-        "property": "DeletePost",
+        "property": "prop_DeletePost",
         "strategy": "hedgehog"
       },
       {
-        "property": "DeleteDelete",
+        "property": "prop_DeleteDelete",
         "strategy": "hedgehog"
       },
       {
-        "property": "DeleteInsert",
+        "property": "prop_DeleteInsert",
         "strategy": "hedgehog"
       },
       {
         "strategy": "hedgehog",
-        "property": "DeleteUnion"
+        "property": "prop_DeleteUnion"
       },
       {
-        "property": "UnionDeleteInsert",
+        "property": "prop_UnionDeleteInsert",
         "strategy": "hedgehog"
       },
       {
-        "property": "DeleteModel",
+        "property": "prop_DeleteModel",
         "strategy": "falsify"
       },
       {
-        "property": "DeletePost",
+        "property": "prop_DeletePost",
         "strategy": "falsify"
       },
       {
-        "property": "DeleteDelete",
+        "property": "prop_DeleteDelete",
         "strategy": "falsify"
       },
       {
         "strategy": "falsify",
-        "property": "DeleteInsert"
+        "property": "prop_DeleteInsert"
       },
       {
         "strategy": "falsify",
-        "property": "DeleteUnion"
+        "property": "prop_DeleteUnion"
       },
       {
-        "property": "UnionDeleteInsert",
+        "property": "prop_UnionDeleteInsert",
         "strategy": "falsify"
       }
     ]
@@ -460,88 +460,88 @@
     "params": null,
     "tasks": [
       {
-        "property": "UnionValid",
+        "property": "prop_UnionValid",
         "strategy": "quickcheck"
       },
       {
         "strategy": "quickcheck",
-        "property": "UnionPost"
+        "property": "prop_UnionPost"
       },
       {
         "strategy": "quickcheck",
-        "property": "UnionModel"
+        "property": "prop_UnionModel"
       },
       {
         "strategy": "quickcheck",
-        "property": "DeleteUnion"
+        "property": "prop_DeleteUnion"
       },
       {
-        "property": "InsertUnion",
+        "property": "prop_InsertUnion",
         "strategy": "quickcheck"
       },
       {
-        "property": "UnionDeleteInsert",
+        "property": "prop_UnionDeleteInsert",
         "strategy": "quickcheck"
       },
       {
         "strategy": "quickcheck",
-        "property": "UnionUnionAssoc"
+        "property": "prop_UnionUnionAssoc"
       },
       {
-        "property": "UnionValid",
+        "property": "prop_UnionValid",
         "strategy": "hedgehog"
       },
       {
-        "property": "UnionPost",
+        "property": "prop_UnionPost",
         "strategy": "hedgehog"
       },
       {
-        "property": "UnionModel",
-        "strategy": "hedgehog"
-      },
-      {
-        "strategy": "hedgehog",
-        "property": "DeleteUnion"
-      },
-      {
-        "property": "InsertUnion",
+        "property": "prop_UnionModel",
         "strategy": "hedgehog"
       },
       {
         "strategy": "hedgehog",
-        "property": "UnionDeleteInsert"
+        "property": "prop_DeleteUnion"
+      },
+      {
+        "property": "prop_InsertUnion",
+        "strategy": "hedgehog"
       },
       {
         "strategy": "hedgehog",
-        "property": "UnionUnionAssoc"
+        "property": "prop_UnionDeleteInsert"
       },
       {
-        "property": "UnionValid",
+        "strategy": "hedgehog",
+        "property": "prop_UnionUnionAssoc"
+      },
+      {
+        "property": "prop_UnionValid",
         "strategy": "falsify"
       },
       {
         "strategy": "falsify",
-        "property": "UnionPost"
+        "property": "prop_UnionPost"
       },
       {
         "strategy": "falsify",
-        "property": "UnionModel"
+        "property": "prop_UnionModel"
       },
       {
         "strategy": "falsify",
-        "property": "DeleteUnion"
+        "property": "prop_DeleteUnion"
       },
       {
-        "property": "InsertUnion",
+        "property": "prop_InsertUnion",
         "strategy": "falsify"
       },
       {
-        "property": "UnionDeleteInsert",
+        "property": "prop_UnionDeleteInsert",
         "strategy": "falsify"
       },
       {
         "strategy": "falsify",
-        "property": "UnionUnionAssoc"
+        "property": "prop_UnionUnionAssoc"
       }
     ]
   },
@@ -558,86 +558,86 @@
     "tasks": [
       {
         "strategy": "quickcheck",
-        "property": "UnionValid"
+        "property": "prop_UnionValid"
       },
       {
-        "property": "UnionPost",
+        "property": "prop_UnionPost",
         "strategy": "quickcheck"
       },
       {
         "strategy": "quickcheck",
-        "property": "UnionModel"
+        "property": "prop_UnionModel"
       },
       {
-        "property": "DeleteUnion",
+        "property": "prop_DeleteUnion",
         "strategy": "quickcheck"
       },
       {
-        "property": "InsertUnion",
+        "property": "prop_InsertUnion",
         "strategy": "quickcheck"
       },
       {
         "strategy": "quickcheck",
-        "property": "UnionDeleteInsert"
+        "property": "prop_UnionDeleteInsert"
       },
       {
-        "property": "UnionUnionAssoc",
+        "property": "prop_UnionUnionAssoc",
         "strategy": "quickcheck"
       },
       {
-        "property": "UnionValid",
+        "property": "prop_UnionValid",
         "strategy": "hedgehog"
       },
       {
         "strategy": "hedgehog",
-        "property": "UnionPost"
+        "property": "prop_UnionPost"
       },
       {
-        "property": "UnionModel",
+        "property": "prop_UnionModel",
         "strategy": "hedgehog"
       },
       {
-        "property": "DeleteUnion",
+        "property": "prop_DeleteUnion",
         "strategy": "hedgehog"
       },
       {
         "strategy": "hedgehog",
-        "property": "InsertUnion"
+        "property": "prop_InsertUnion"
       },
       {
-        "property": "UnionDeleteInsert",
+        "property": "prop_UnionDeleteInsert",
         "strategy": "hedgehog"
       },
       {
-        "property": "UnionUnionAssoc",
+        "property": "prop_UnionUnionAssoc",
         "strategy": "hedgehog"
       },
       {
         "strategy": "falsify",
-        "property": "UnionValid"
+        "property": "prop_UnionValid"
       },
       {
-        "property": "UnionPost",
+        "property": "prop_UnionPost",
         "strategy": "falsify"
       },
       {
         "strategy": "falsify",
-        "property": "UnionModel"
+        "property": "prop_UnionModel"
       },
       {
-        "property": "DeleteUnion",
+        "property": "prop_DeleteUnion",
         "strategy": "falsify"
       },
       {
-        "property": "InsertUnion",
+        "property": "prop_InsertUnion",
         "strategy": "falsify"
       },
       {
         "strategy": "falsify",
-        "property": "UnionDeleteInsert"
+        "property": "prop_UnionDeleteInsert"
       },
       {
-        "property": "UnionUnionAssoc",
+        "property": "prop_UnionUnionAssoc",
         "strategy": "falsify"
       }
     ]
@@ -654,76 +654,76 @@
     "params": null,
     "tasks": [
       {
-        "property": "UnionPost",
+        "property": "prop_UnionPost",
         "strategy": "quickcheck"
       },
       {
         "strategy": "quickcheck",
-        "property": "UnionModel"
+        "property": "prop_UnionModel"
       },
       {
-        "property": "DeleteUnion",
+        "property": "prop_DeleteUnion",
         "strategy": "quickcheck"
       },
       {
         "strategy": "quickcheck",
-        "property": "InsertUnion"
+        "property": "prop_InsertUnion"
       },
       {
         "strategy": "quickcheck",
-        "property": "UnionDeleteInsert"
+        "property": "prop_UnionDeleteInsert"
       },
       {
         "strategy": "quickcheck",
-        "property": "UnionUnionAssoc"
+        "property": "prop_UnionUnionAssoc"
       },
       {
         "strategy": "hedgehog",
-        "property": "UnionPost"
+        "property": "prop_UnionPost"
       },
       {
         "strategy": "hedgehog",
-        "property": "UnionModel"
+        "property": "prop_UnionModel"
       },
       {
         "strategy": "hedgehog",
-        "property": "DeleteUnion"
+        "property": "prop_DeleteUnion"
       },
       {
-        "property": "InsertUnion",
+        "property": "prop_InsertUnion",
         "strategy": "hedgehog"
       },
       {
         "strategy": "hedgehog",
-        "property": "UnionDeleteInsert"
+        "property": "prop_UnionDeleteInsert"
       },
       {
-        "property": "UnionUnionAssoc",
+        "property": "prop_UnionUnionAssoc",
         "strategy": "hedgehog"
       },
       {
-        "property": "UnionPost",
+        "property": "prop_UnionPost",
         "strategy": "falsify"
       },
       {
         "strategy": "falsify",
-        "property": "UnionModel"
+        "property": "prop_UnionModel"
       },
       {
-        "property": "DeleteUnion",
+        "property": "prop_DeleteUnion",
         "strategy": "falsify"
       },
       {
         "strategy": "falsify",
-        "property": "InsertUnion"
+        "property": "prop_InsertUnion"
       },
       {
         "strategy": "falsify",
-        "property": "UnionDeleteInsert"
+        "property": "prop_UnionDeleteInsert"
       },
       {
         "strategy": "falsify",
-        "property": "UnionUnionAssoc"
+        "property": "prop_UnionUnionAssoc"
       }
     ]
   }
