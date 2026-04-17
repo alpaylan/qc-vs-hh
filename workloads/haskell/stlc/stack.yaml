@@ -3,12 +3,12 @@ compiler: ghc-9.10.3
 allow-newer: true
 system-ghc: true
 
-packages:
-    - .
-    - ../common/etna-lib
+extra-include-dirs:
+    - /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/ffi
 
 extra-deps:
     - falsify-0.3.0@sha256:75ff775bd5c7e673bd09ba6c8543bc6e6769f2ee4827120b08c80480ece09800,5418
 
-extra-include-dirs:
-    - /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/ffi
+packages:
+    - .
+    - ../common/etna-lib
