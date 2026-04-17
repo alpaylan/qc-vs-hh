@@ -8,6 +8,7 @@ dependencies:
     - leancheck
     - generic-random
     - deepseq
+    - hedgehog
     - falsify
 
 library:
@@ -32,4 +33,3 @@ executables:
             - -with-rtsopts=-N
         dependencies:
             - etna-rbt
-

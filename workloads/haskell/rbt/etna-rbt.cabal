@@ -13,6 +13,8 @@ library
       Impl
       Spec
       Strategy.Correct
+      Strategy.Falsify
+      Strategy.Hedgehog
       Strategy.Lean
       Strategy.LeanRev
       Strategy.Quick
@@ -30,6 +32,7 @@ library
     , etna-lib
     , falsify
     , generic-random
+    , hedgehog
     , leancheck
     , smallcheck
   default-language: Haskell2010
@@ -49,6 +52,7 @@ executable rbt
     , etna-rbt
     , falsify
     , generic-random
+    , hedgehog
     , leancheck
     , smallcheck
   default-language: Haskell2010
@@ -68,6 +72,7 @@ executable rbt-sampler
     , etna-rbt
     , falsify
     , generic-random
+    , hedgehog
     , leancheck
     , smallcheck
   default-language: Haskell2010

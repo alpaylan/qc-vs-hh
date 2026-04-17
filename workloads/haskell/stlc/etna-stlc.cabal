@@ -13,6 +13,8 @@ library
       Impl
       Spec
       Strategy.Correct
+      Strategy.Falsify
+      Strategy.Hedgehog
       Strategy.Lean
       Strategy.LeanRev
       Strategy.Quick
@@ -29,6 +31,7 @@ library
     , etna-lib
     , falsify
     , generic-random
+    , hedgehog
     , leancheck
     , smallcheck
   default-language: Haskell2010
@@ -48,6 +51,7 @@ executable stlc
     , etna-stlc
     , falsify
     , generic-random
+    , hedgehog
     , leancheck
     , smallcheck
   default-language: Haskell2010
@@ -67,6 +71,7 @@ executable stlc-sampler
     , etna-stlc
     , falsify
     , generic-random
+    , hedgehog
     , leancheck
     , smallcheck
   default-language: Haskell2010
